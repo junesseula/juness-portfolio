@@ -72,12 +72,15 @@ export default function Home() {
               from initial design to a live, high-performance site.
             </p>
             <div className="mp-deepdive__tags">
-              {['Research', 'Design System', 'Development'].map((tag) => (
+              {['Research', 'Vibe Coding', 'Development'].map((tag) => (
                 <span key={tag}>{tag}</span>
               ))}
             </div>
+            <Link to="case-studies/vibe-coding-this-portfolio" className="mp-deepdive__link">
+              Learn More
+            </Link>
             <Link to="/case-studies" className="mp-deepdive__link">
-              Explore the Case Studies
+              Explore Other Work
             </Link>
           </div>
         </div>

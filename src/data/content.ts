@@ -1,8 +1,7 @@
 export const nav = [
-  { label: 'Work', to: '/#work' },
+  { label: 'Home', to: '/' },
   { label: 'Case Studies', to: '/case-studies' },
   { label: 'About', to: '/about' },
-  { label: 'Contact', to: '/about#contact' },
 ]
 
 export const brand = {
