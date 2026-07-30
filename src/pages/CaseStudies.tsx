@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { caseStudies } from '../data/caseStudies.js'
+import { caseStudies } from '../data/caseStudies'
 
 export default function CaseStudies() {
   return (
@@ -19,7 +19,15 @@ export default function CaseStudies() {
             <Link to={`/case-studies/${cs.slug}`} className="cs-card" key={cs.slug}>
               <div
                 className="cs-card__cover"
-                style={{ background: `linear-gradient(150deg, ${cs.accent}, ${cs.secondaryAccent})` }}
+                style={
+                  cs.coverImage
+                    ? {
+                        backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.55)), url(${cs.coverImage})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                      }
+                    : { background: `linear-gradient(150deg, ${cs.accent}, ${cs.secondaryAccent})` }
+                }
               >
                 <span className="num">0{i + 1}</span>
                 <span className="name">{cs.name}</span>
@@ -28,6 +36,7 @@ export default function CaseStudies() {
                 <h3>{cs.tagline}</h3>
                 <p>{cs.summary}</p>
                 <div className="cs-card__tags">
+                  {cs.featured && <span>Featured</span>}
                   <span>{cs.category}</span>
                   <span>{cs.platform}</span>
                   <span>{cs.timeline}</span>

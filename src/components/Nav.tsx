@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { nav, brand } from '../data/content.js'
+import { nav, brand } from '../data/content'
 
 export default function Nav() {
   const [open, setOpen] = useState(false)
@@ -22,8 +22,13 @@ export default function Nav() {
               {item.label}
             </a>
           ))}
-          <a className="btn btn--small btn--primary nav__cta" href="/about#contact" onClick={() => setOpen(false)}>
-            Resume
+          <a
+            className="btn btn--small btn--primary nav__cta"
+            href="/Juness%20Rulloda%20Resume.pdf"
+            download="Juness Rulloda Resume.pdf"
+            onClick={() => setOpen(false)}
+          >
+            Download Resume
           </a>
         </nav>
 

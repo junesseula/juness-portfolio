@@ -1,9 +1,10 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
-import { caseStudies, getCaseStudy } from '../data/caseStudies.js'
+import { caseStudies, getCaseStudy } from '../data/caseStudies'
+import MoreResources from '../components/MoreResources'
 
 export default function CaseStudyDetail() {
-  const { slug } = useParams()
-  const study = getCaseStudy(slug)
+  const { slug } = useParams<{ slug: string }>()
+  const study = slug ? getCaseStudy(slug) : undefined
 
   if (!study) {
     return <Navigate to="/case-studies" replace />
@@ -38,12 +39,45 @@ export default function CaseStudyDetail() {
             <div className="value">{study.timeline}</div>
           </div>
         </div>
+
+        {(study.liveUrl || study.figmaUrl) && (
+          <div className="btn-row" style={{ marginTop: 24 }}>
+            {study.liveUrl && (
+              <a
+                href={study.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn--small btn--secondary"
+              >
+                Visit Live Site &rarr;
+              </a>
+            )}
+            {study.figmaUrl && (
+              <a
+                href={study.figmaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn--small btn--secondary"
+              >
+                View the Figma Design Process &rarr;
+              </a>
+            )}
+          </div>
+        )}
       </header>
 
       <div className="container">
         <div
           className="csd-cover"
-          style={{ background: `linear-gradient(140deg, ${study.accent}, ${study.secondaryAccent})` }}
+          style={
+            study.coverImage
+              ? {
+                  backgroundImage: `url(${study.coverImage})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }
+              : { background: `linear-gradient(140deg, ${study.accent}, ${study.secondaryAccent})` }
+          }
         />
       </div>
 
@@ -96,7 +130,7 @@ export default function CaseStudyDetail() {
                 </div>
               </div>
             </div>
-            <div className="type-sample">
+            <div className="type-sample" style={{ fontFamily: study.typography }}>
               <div className="big">Aa</div>
               <div className="small">{study.typography} &mdash; headings &amp; body</div>
             </div>
@@ -108,6 +142,13 @@ export default function CaseStudyDetail() {
         <div className="container">
           <p className="kicker">03. IMPLEMENTATION</p>
           <h2>How it got built</h2>
+          {study.implementationImage && (
+            <img
+              className="csd-implementation-image"
+              src={study.implementationImage}
+              alt={`${study.name} implementation diagram`}
+            />
+          )}
           <div className="steps">
             {study.implementation.map((step, i) => (
               <div className="step" key={step.title}>
@@ -117,10 +158,11 @@ export default function CaseStudyDetail() {
               </div>
             ))}
           </div>
+          <MoreResources items={study.moreResources} />
         </div>
       </section>
 
-      <section className="csd-block" style={{ borderBottom: 'none' }}>
+      <section className="csd-block" style={study.testimonials?.length ? undefined : { borderBottom: 'none' }}>
         <div className="container">
           <p className="kicker">04. RESULTS</p>
           <h2>What changed</h2>
@@ -133,12 +175,33 @@ export default function CaseStudyDetail() {
               </div>
             ))}
           </div>
-          <blockquote className="pull-quote" style={{ marginTop: 32 }}>
-            &ldquo;{study.results.quote}&rdquo;
-            <cite>{study.results.quoteAttribution}</cite>
-          </blockquote>
+          {study.results.quote && (
+            <blockquote className="pull-quote" style={{ marginTop: 32 }}>
+              &ldquo;{study.results.quote}&rdquo;
+              <cite>{study.results.quoteAttribution}</cite>
+            </blockquote>
+          )}
         </div>
       </section>
+
+      {study.testimonials?.length > 0 && (
+        <section className="csd-block" style={{ borderBottom: 'none' }}>
+          <div className="container">
+            <h2>What clients say</h2>
+            <div className="testimonial-grid">
+              {study.testimonials.map((t) => (
+                <blockquote className="pull-quote" key={t.name}>
+                  &ldquo;{t.quote}&rdquo;
+                  <cite>
+                    {t.name}
+                    {t.title && <span className="testimonial-title">{t.title}</span>}
+                  </cite>
+                </blockquote>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="csd-cta container">
         <h2>Ready to build something exceptional?</h2>

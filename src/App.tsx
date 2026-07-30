@@ -1,12 +1,12 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
-import Nav from './components/Nav.jsx'
-import Footer from './components/Footer.jsx'
-import Home from './pages/Home.jsx'
-import CaseStudies from './pages/CaseStudies.jsx'
-import CaseStudyDetail from './pages/CaseStudyDetail.jsx'
-import About from './pages/About.jsx'
-import NotFound from './pages/NotFound.jsx'
+import Nav from './components/Nav'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import CaseStudies from './pages/CaseStudies'
+import CaseStudyDetail from './pages/CaseStudyDetail'
+import About from './pages/About'
+import NotFound from './pages/NotFound'
 
 function ScrollToTop() {
   const { pathname } = useLocation()

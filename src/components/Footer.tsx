@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { brand } from '../data/content.js'
+import { brand } from '../data/content'
 
 export default function Footer() {
   return (

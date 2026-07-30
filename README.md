@@ -1,4 +1,4 @@
-# Juness Bulloda — Portfolio
+# Juness Rulloda — Portfolio
 
 A React + Vite portfolio site with four pages:
 
@@ -37,8 +37,7 @@ npm run preview
 
 ## Notes
 
-- Contact email in `src/data/content.js` is a placeholder
-  (`hello@junessbulloda.com`) — update it to your real address.
+- Contact email in `src/data/content.js` is `info@junessrulloda.com`.
 - Social links in the footer are placeholder `#` links — wire them up
   to your actual profiles.
 - No build/runtime dependencies beyond React, React Router, and Vite —

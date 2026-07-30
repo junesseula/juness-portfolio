@@ -1,14 +1,23 @@
-import { journey, skills, aboutBio, brand } from '../data/content.js'
+import { journey, skills, aboutBio, brand } from '../data/content'
 
 export default function About() {
   return (
     <>
-      <section className="about-hero container">
-        <p className="eyebrow">About</p>
-        <h1>Hi, I'm Juness! I thrive on embracing new challenges.</h1>
-        {aboutBio.map((p, i) => (
-          <p className="lede" key={i} style={{ marginTop: i === 0 ? 20 : 14 }}>{p}</p>
-        ))}
+      <section className="about-hero container about-hero--grid">
+        <div>
+          <p className="eyebrow">About</p>
+          <h1>Hi, I'm Juness! I thrive on embracing new challenges.</h1>
+          {aboutBio.map((p, i) => (
+            <p className="lede" key={i} style={{ marginTop: i === 0 ? 20 : 14 }}>{p}</p>
+          ))}
+        </div>
+        <div className="portrait-frame">
+          <div className="portrait-frame__blob portrait-frame__blob--blue" />
+          <div className="portrait-frame__blob portrait-frame__blob--maroon" />
+          <div className="portrait-frame__image">
+            <img src="/portrait1.jpg" alt="Juness Rulloda Portrait" />
+          </div>
+        </div>
       </section>
 
       <section className="section container" style={{ paddingTop: 24 }}>

@@ -6,14 +6,13 @@ export const nav = [
 ]
 
 export const brand = {
-  name: 'Juness Bulloda',
+  name: 'Juness Rulloda',
   role: 'Product Designer & Front-End Engineer',
-  email: 'hello@junessbulloda.com',
+  email: 'info@junessrulloda.com',
   location: 'Remote / Worldwide',
   socials: [
-    { label: 'LinkedIn', href: '#' },
-    { label: 'Dribbble', href: '#' },
-    { label: 'GitHub', href: '#' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/juness/' },
+    { label: 'GitHub', href: 'https://github.com/junesseula' },
   ],
 }
 
@@ -40,8 +39,8 @@ export const valueProps = [
 ]
 
 export const testimonial = {
-  quote: 'To create, one must first question everything — even the very tools we use to manifest our vision.',
-  attribution: 'Juness Bulloda, Designer',
+  quote: 'To create, one must first question everything.',
+  attribution: 'Eileen Gray',
 }
 
 export const journey = [
