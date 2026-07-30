@@ -1,6 +1,11 @@
 import { Link } from 'react-router-dom'
-import { valueProps, testimonial } from '../data/content'
+import { Box, Image, chakra } from '@chakra-ui/react'
+import { valueProps, valuePropsIntro, testimonial } from '../data/content'
 import { caseStudies } from '../data/caseStudies'
+
+const eyebrowText = 'Available for hire'
+const eyebrowStartDelayMs = 200
+const letterStaggerMs = 100
 
 const valueIcons = [
   'https://storage.googleapis.com/storage.magicpath.ai/user/432624603182026752/figma-assets/e046b829-1e9f-4a78-b767-306a94dab4d8.svg',
@@ -13,34 +18,83 @@ export default function Home() {
   const featured = [
     ...caseStudies.filter((cs) => cs.featured),
     ...caseStudies.filter((cs) => !cs.featured),
-  ].slice(0, 3)
+  ].slice(0, 5)
 
   return (
     <div className="mp-page">
       <section className="mp-hero">
         <div className="mp-hero__inner">
           <div className="mp-hero__content">
-            <p className="mp-eyebrow mp-hero__eyebrow">Available for hire</p>
+            <Box as="p" className="mp-eyebrow mp-hero__eyebrow" aria-label={eyebrowText}>
+              {eyebrowText.split('').map((char, i) => (
+                <Box
+                  as="span"
+                  key={i}
+                  aria-hidden="true"
+                  display="inline-block"
+                  animationName="fade-in"
+                  animationDuration="fast"
+                  animationTimingFunction="ease-in-smooth"
+                  animationFillMode="both"
+                  animationDelay={`${eyebrowStartDelayMs + i * letterStaggerMs}ms`}
+                >
+                  {char === ' ' ? ' ' : char}
+                </Box>
+              ))}
+              <Box
+                as="span"
+                aria-hidden="true"
+                display="inline-block"
+                width="2px"
+                height="1em"
+                marginLeft="4px"
+                marginBottom="2px"
+                bg="currentColor"
+                verticalAlign="text-bottom"
+                animationName="pulse"
+                animationDuration="1s"
+                animationTimingFunction="ease-in-out"
+                animationIterationCount="infinite"
+                animationDelay={`${eyebrowStartDelayMs + eyebrowText.length * letterStaggerMs + 150}ms`}
+              />
+            </Box>
             <h1>Hi, I&rsquo;m Juness, a UX Designer who builds with code.</h1>
             <p className="mp-hero__lede">
               I design purposeful visual experiences across digital and print, bridging the gap
               between high-fidelity craftsmanship and technical execution.
             </p>
             <div className="btn-row">
-              <a href="#work" className="btn btn--mp-primary">
+              <chakra.a
+                href="#work"
+                className="btn btn--mp-primary"
+                animationName="slide-from-bottom-full, fade-in"
+                animationDuration="slowest"
+                animationTimingFunction="ease-in-smooth"
+                animationFillMode="both"
+                animationDelay="300ms"
+              >
                 View Selected Work
-              </a>
+              </chakra.a>
             </div>
           </div>
         </div>
-        <img src="/portrait-main.png" alt="Juness Rulloda" className="mp-hero__portrait" />
+        <Image
+          src="/portrait-main.png"
+          alt="Juness Rulloda"
+          className="mp-hero__portrait"
+          animationName="slide-from-right-full, fade-in"
+          animationDuration="1.2s"
+          animationTimingFunction="ease-in-smooth"
+          animationFillMode="both"
+        />
       </section>
 
       <section className="mp-values">
         <div className="mp-values__inner">
           <div className="mp-values__head">
             <p className="mp-eyebrow mp-values__eyebrow">The value proposition</p>
-            <h2>Why I&rsquo;m a good fit for your next project</h2>
+            <h2>Why I might be a good fit for your next project</h2>
+            <p className="mp-values__intro">{valuePropsIntro}</p>
           </div>
           <div className="mp-values__grid">
             {valueProps.map((p, i) => (

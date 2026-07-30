@@ -22,6 +22,9 @@ export const heroStats = [
   { value: '99%', label: 'Client satisfaction' },
 ]
 
+export const valuePropsIntro =
+  "The best products happen when strategy, design, and technology work together—not in silos. With over 10 years of experience designing digital products, I bring an end-to-end perspective that spans user research, product strategy, interaction design, design systems, and front-end development."
+
 export const valueProps = [
   {
     title: 'Product Thinking',
@@ -43,9 +46,9 @@ export const testimonial = {
 }
 
 export const journey = [
-  { value: '7+', label: 'Years designing digital products' },
-  { value: '12', label: 'Products launched to market' },
-  { value: '3', label: 'Design teams built & mentored' },
+  { value: '10+', label: 'Years designing digital products' },
+  { value: '40+', label: 'Projects designed and delivered' },
+  { value: '2', label: 'Design teams built & mentored' },
 ]
 
 export const skills = [
@@ -68,7 +71,7 @@ export const skills = [
 ]
 
 export const aboutBio = [
-  "I'm a product designer who thrives on embracing new challenges — the messier the problem, the more interesting the work.",
-  "Over the last several years I've partnered with startups and product teams across health tech, wellness, and consumer apps, taking ideas from a blank canvas to shipped, measurable experiences.",
-  "These days I split my time between research-heavy UX work and hands-on front-end implementation — I like staying close enough to the code that nothing gets lost between the design file and the browser.",
+  "I'm a Senior Product Designer with 10+ years of experience turning complex problems into intuitive digital products across fintech, real estate technology, and regulated industries.",
+  "I thrive in ambiguity, partnering with cross-functional teams to take products from early strategy and user research through polished, production-ready experiences.",
+  "I bridge design and development by staying close to the code and leveraging AI throughout my workflow, ensuring ideas are not only thoughtful but also practical to build.",
 ]

@@ -835,6 +835,9 @@ h3 {
 /* Reserves the 40% (+ gap) the portrait occupies on the right, so the text
    column can never grow wide enough to overlap it. */
 .mp-hero__inner { max-width: min(1200px, 66%); width: 100%; }
+@media (max-width: 768px) {
+  .mp-hero__inner { max-width: 100%; }
+}
 .mp-hero__content {
   display: flex;
   flex-direction: column;
@@ -877,6 +880,14 @@ h3 {
   gap: 16px;
 }
 .mp-values__eyebrow { color: var(--mp-muted); }
+.mp-values__intro {
+  font-family: var(--font-body);
+  color: var(--mp-muted);
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 760px;
+  margin: 0 auto;
+}
 .mp-values__grid {
   display: flex;
   flex-wrap: wrap;

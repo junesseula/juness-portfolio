@@ -94,17 +94,24 @@ export const caseStudies: CaseStudy[] = [
         body: 'The MagicPath skill was installed into Claude Code, letting it reference the MagicPath canvas frames directly and use them to scaffold and build this production React + Vite codebase.',
       },
       {
-        title: 'Editorial Refinement',
-        body: 'Each real case study — Cirrus, Inspections Application, Surefund — was individually researched from its real source and rewritten into the site\'s voice, with no invented metrics or quotes.',
+        title: 'Code Refinement',
+        body: "The initial build was missing imagery, animations felt flat, and the design system wasn't holding together across components. The codebase was reformatted to TypeScript and Chakra UI was installed, bringing tighter design consistency, styling, and motion to the finished site.",
       },
       {
-        title: 'Asset Pipeline',
-        body: 'The Electric Blue / Plus Jakarta Sans design system flowed from the original Figma and MagicPath explorations straight into the coded design tokens, keeping the shipped site visually consistent with the earliest design direction.',
+        title: 'Editorial Refinement',
+        body: 'Each real case study — Cirrus, Inspections Application, Surefund — was individually researched from its real source and rewritten into the site\'s voice, with no invented metrics or quotes.',
       },
     ],
     results: {
       body: 'The result is this site: a fully responsive, four-page portfolio — home, case studies, detail pages, and about — that went from AI-generated first drafts to a production codebase with real client work, without skipping the design or the editorial pass.',
     },
+    moreResources: [
+      {
+        label: 'Archived Portfolio',
+        description: 'The previous version of this portfolio, kept live for reference.',
+        url: 'https://archived.junessrulloda.com/',
+      },
+    ],
   },
   {
     slug: 'cirrus',
@@ -288,6 +295,172 @@ export const caseStudies: CaseStudy[] = [
       body: 'Surefund shipped as a net-new production application in 2020 and remains live today at surefund.ca — still onboarding real estate lawyers and law clerks across Ontario, and now embedded in daily closing-day workflows at multiple firms.',
       quote: "We can't imagine running the firm without SureFund. It's something we've come to completely depend on as a firm and we can't do our jobs without it: it serves a function that's useful for real estate law generally.",
       quoteAttribution: 'Zamir Alakozi, Real Estate Lawyer & Founder, Advent Legal',
+    },
+  },
+  {
+    slug: 'rbc-virtual-assistant',
+    name: 'RBC Virtual Assistant',
+    tagline: 'User-Centered Design for an Enterprise Virtual Assistant Framework',
+    category: 'Conversational UX, Enterprise Design',
+    platform: 'Web · Virtual Assistant Framework',
+    role: 'UX Designer, Virtual Assistant Experience',
+    timeline: 'Jul 2019 – Feb 2020',
+    accent: '#005DAA',
+    accentSoft: '#E3EEF9',
+    accentName: 'Royal Blue',
+    secondaryAccent: '#FDB913',
+    secondaryName: 'RBC Gold',
+    summary:
+      'Partnering with Enterprise Architecture to design user-centered experiences for the virtual assistant frameworks used across RBC, integrating Google Dialogflow, OAuth-secured APIs, and React.',
+    stats: [
+      { value: 'Jul 2019 – Feb 2020', label: 'Engagement timeline' },
+      { value: 'Enterprise Architecture', label: 'Cross-org partnership' },
+      { value: 'Dialogflow · OAuth · React', label: 'Tools integrated' },
+      { value: 'Sketch · InVision', label: 'Design & presentation tools' },
+    ],
+    problem:
+      'RBC needed virtual assistant frameworks that could be adopted consistently across the organization, rather than each team designing conversational experiences on its own. The task was to work directly with Enterprise Architecture to bring user-centered design principles into how those frameworks were built.',
+    research: {
+      body: "The work centered on embedding UX thinking into a technical framework meant for reuse across many teams — understanding how Enterprise Architecture structured the underlying systems, and where a consistent, user-centered layer needed to sit on top so every team building on the framework could produce a coherent assistant experience. Ideas and design directions were presented and iterated on with stakeholders using Sketch and InVision.",
+      quote: 'A virtual assistant is only as good as the trust and consistency behind every interaction it has across the organization.',
+      quoteAttribution: 'Design approach, RBC Virtual Assistant case study',
+    },
+    typography: 'Inter',
+    implementation: [
+      {
+        title: 'Framework Collaboration',
+        body: "Worked directly with RBC's Enterprise Architecture team to design user-centered experiences for the virtual assistant frameworks used across the organization, ensuring UX considerations were built into the framework itself rather than bolted on afterward.",
+      },
+      {
+        title: 'Conversational & API Integration',
+        body: 'Integrated Google Dialogflow for conversational logic alongside OAuth-secured APIs and React front ends, connecting the design of the assistant experience to how it was actually authenticated and rendered.',
+      },
+      {
+        title: 'Stakeholder Presentation & Iteration',
+        body: 'Used Sketch and InVision to present and communicate design ideas across teams, gathering feedback and iterating to keep the experience aligned with real user needs.',
+      },
+    ],
+    results: {
+      body: 'The engagement helped establish a user-centered foundation for how virtual assistants got built across RBC — giving teams building on the framework a consistent, tested set of conversational UX patterns backed by secure, authenticated integrations rather than one-off designs.',
+    },
+  },
+  {
+    slug: 'bmo-two-step-verification',
+    name: 'BMO Two-Step Verification',
+    tagline: 'Securing BMO InvestorLine Logins Without Adding Friction',
+    category: 'Mobile, UI/UX',
+    platform: 'Mobile',
+    role: 'UX Designer',
+    timeline: '2016',
+    accent: '#0075BE',
+    accentSoft: '#E5F1FA',
+    accentName: 'BMO Blue',
+    secondaryAccent: '#EE3124',
+    secondaryName: 'BMO Red',
+    coverImage: '/bmo-two-step-verification-cover.jpg',
+    implementationImage: '/bmo-two-step-verification-flow.png',
+    summary:
+      'A two-step verification flow for BMO InvestorLine, adding a secondary layer of identity confirmation beyond the password so clients’ money and account access stayed secure.',
+    stats: [
+      { value: '2016', label: 'Project year' },
+      { value: '2 Personas', label: 'Novice & advanced trader research' },
+      { value: 'Enroll + Step-Up', label: 'Two full verification flows designed' },
+      { value: 'Redline Handoff', label: 'Annotated specs for engineering' },
+    ],
+    problem:
+      "BMO InvestorLine is where BMO clients trade the stock markets, across two platforms: Self-Directed, with full freedom to make their own trades, and AdviceDirect, where trades follow an assigned advisor's guidance. Two-step verification adds a secondary check beyond username and password to confirm a user's identity before granting account access. The task was to design that layer for BMO InvestorLine clients so their money and account access stayed protected, on mobile as much as on desktop.",
+    research: {
+      body: "Design started from two client personas built out of a BMO InvestorLine client panel: Joyce Best, a 'Confident New Client' with novice investment knowledge who logs in mainly on mobile to check balances and wants guidance, and Sunny Lee, a 'Proactive Soloist' with advanced investment knowledge who trades frequently and wants full control with minimal friction. Their differing comfort levels shaped the enrollment flow — clear, reassuring copy and an easy opt-out for Joyce, a fast path with a trusted-device option for Sunny — before either persona ever reached the step-up verification screen.",
+      quote: "I'm pretty new to all this and I want to feel more confident with trading. I am eager to learn things that will help me make solid decisions.",
+      quoteAttribution: 'Joyce Best persona, built from BMO InvestorLine client research',
+    },
+    typography: 'System UI',
+    implementation: [
+      {
+        title: 'Enrollment Flow',
+        body: 'A three-screen mobile setup flow — an in-app notification introducing two-step verification, a screen for adding up to ten phone numbers with nicknames, and a terms-and-conditions confirmation with a "trusted device" opt-out — ending in a completion screen.',
+      },
+      {
+        title: 'Managing Contact Numbers',
+        body: 'Add and delete interactions for the saved phone number list were mocked up and annotated separately, marking which areas of the screen stayed fixed and which scrolled, for a clean engineering handoff.',
+      },
+      {
+        title: 'Step-Up Verification',
+        body: 'A two-screen in-session challenge — select a saved number and delivery method (voice or text), then enter the code — triggered on sign-in from an unrecognized device, with the same trusted-device opt-out carried through.',
+      },
+    ],
+    results: {
+      body: "The result was a fully annotated two-step verification system — enrollment, contact management, and step-up challenge — designed around real client research and handed off with redlined specs ready for BMO's engineering team to build against.",
+    },
+  },
+  {
+    slug: 'bil-homepage-redesign',
+    name: 'BMO InvestorLine Homepage Redesign',
+    tagline: 'One Homepage, Two Very Different Investors',
+    category: 'Branding, UI/UX',
+    platform: 'Web',
+    role: 'UX/UI Designer',
+    timeline: '2017',
+    accent: '#0072CE',
+    accentSoft: '#E3F1FC',
+    accentName: 'BMO Blue',
+    secondaryAccent: '#EE3831',
+    secondaryName: 'BMO Red',
+    coverImage: '/bil-homepage-new-design.jpg',
+    implementationImage: '/bil-homepage-design-detail.jpg',
+    summary:
+      "A homepage redesign for BMO InvestorLine, built from real client-panel research to serve both self-directed traders and advice-guided investors from a single dashboard.",
+    stats: [
+      { value: '2017', label: 'Project year' },
+      { value: '2', label: 'Personas built from a real BIL client panel' },
+      { value: 'Wireframe → Hi-Fi', label: 'Full IA-to-visual design process' },
+      { value: 'Self-Directed & AdviceDirect', label: 'Two investor types, one homepage' },
+    ],
+    problem:
+      "BMO InvestorLine is a national online brokerage serving two very different clients through the same homepage: fully self-directed traders, and clients enrolled in the advisor-guided AdviceDirect program. The existing dashboard treated them identically — accounts buried behind a dropdown, portfolio totals requiring scrolling to find, and a market-news module too small to be useful to either. The task was to redesign the InvestorLine homepage against modern BMO branding while genuinely improving usability for both audiences.",
+    research: {
+      body: "Research centered on two personas built from a real InvestorLine client panel. Sunny Lee, a 58-year-old \"Proactive Soloist,\" is a self-directed, 5-star gold client trading 5–10 times a month who wants fast, uninterrupted access to market news, research tools, and his five accounts. Joyce Best, a 38-year-old \"Confident New Client,\" is a moderate/novice investor who logs in weekly, wants guidance more than control, and finds the existing research tools scattered and overwhelming. Client verbatims collected from the panel converged on the same complaints from both ends of the spectrum: the page was too cluttered, holdings were hard to scan at a glance, and switching accounts meant fighting a dropdown instead of just clicking.",
+      quote:
+        'I need current up to date information about the latest market news and companies. I am confident making my own investment decisions, but research is vital to my decision making and I need a central go-to spot to start my research in the right direction.',
+      quoteAttribution: '— Sunny Lee, "Proactive Soloist" persona',
+    },
+    typography: 'Helvetica Neue',
+    implementation: [
+      {
+        title: 'Persona-Driven IA',
+        body: "Low-fidelity wireframes were structured around both personas' top tasks — check portfolio value, switch accounts, get to research — rather than replicating the legacy layout. Early versions tested account cards, a diversification breakdown, and a holdings overview table against both a self-directed and an advice-guided reading of the same data.",
+      },
+      {
+        title: 'Clickable Account Cards',
+        body: "The single account dropdown was replaced with clickable account cards directly on the homepage — answering the panel's most repeated complaint about switching accounts — each showing cash balance and unrealized gain/loss without a page change.",
+      },
+      {
+        title: 'Modern BMO Visual System',
+        body: 'The visual layer was rebuilt against current BMO branding: a cleaner header, a prominent search-to-trade bar, and a larger, better-organized My News module, replacing the dense legacy tables and banner ad from the previous design.',
+      },
+    ],
+    moreResources: [
+      {
+        label: 'Original Homepage (Before)',
+        description: 'The legacy BMO InvestorLine homepage this project replaced.',
+        url: '/bil-homepage-old-design.jpg',
+      },
+      {
+        label: 'Persona: Sunny Lee, "Proactive Soloist"',
+        description: 'Self-directed, 5-star gold client persona built from the BIL client panel.',
+        url: '/bil-persona-sunny.jpg',
+      },
+      {
+        label: 'Persona: Joyce Best, "Confident New Client"',
+        description: 'Moderate/novice, advice-seeking client persona built from the BIL client panel.',
+        url: '/bil-persona-joyce.jpg',
+      },
+    ],
+    results: {
+      body: "The redesigned homepage directly answered the loudest pattern in the client-panel feedback — reduce the clutter, make it easier to find what I want — with a card-based layout that surfaces total portfolio value, individual accounts, holdings movers, and market news without the scrolling and dropdown-hunting the legacy design required, while still serving both the self-directed and advice-guided personas from a single homepage.",
+      quote:
+        "I'm pretty new to all this and I want to feel more confident with trading. I am eager to learn things that will help me make solid decisions. Research is important and I need some guidance on where to start.",
+      quoteAttribution: '— Joyce Best, "Confident New Client" persona',
     },
   },
 ]
