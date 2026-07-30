@@ -1,0 +1,39 @@
+name: Deploy to DreamHost
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch: {}
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type-check
+        run: npm run typecheck
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy dist/ to DreamHost via rsync over SSH
+        uses: burnett01/rsync-deployments@7.0.2
+        with:
+          switches: -avzr --delete --chmod=D755,F644 --exclude=".well-known/"
+          path: dist/
+          remote_path: ${{ secrets.DREAMHOST_TARGET_DIR }}
+          remote_host: ${{ secrets.DREAMHOST_HOST }}
+          remote_user: ${{ secrets.DREAMHOST_USER }}
+          remote_key: ${{ secrets.DREAMHOST_SSH_KEY }}
+          remote_port: 22
