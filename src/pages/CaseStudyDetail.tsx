@@ -40,7 +40,7 @@ export default function CaseStudyDetail() {
           </div>
         </div>
 
-        {(study.liveUrl || study.figmaUrl) && (
+        {(study.liveUrl || study.figmaUrl || study.githubUrl) && (
           <div className="btn-row" style={{ marginTop: 24 }}>
             {study.liveUrl && (
               <a
@@ -60,6 +60,16 @@ export default function CaseStudyDetail() {
                 className="btn btn--small btn--secondary"
               >
                 View the Figma Design Process &rarr;
+              </a>
+            )}
+            {study.githubUrl && (
+              <a
+                href={study.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn--small btn--secondary"
+              >
+                View Source on GitHub &rarr;
               </a>
             )}
           </div>

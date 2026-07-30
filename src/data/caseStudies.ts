@@ -38,6 +38,7 @@ export interface CaseStudy {
   implementationImage?: string
   liveUrl?: string
   figmaUrl?: string
+  githubUrl?: string
   summary: string
   stats: CaseStudyStat[]
   problem: string
@@ -73,6 +74,7 @@ export const caseStudies: CaseStudy[] = [
     secondaryAccent: '#8B2E3F',
     secondaryName: 'Signal Maroon',
     figmaUrl: 'https://www.figma.com/design/dVo9Pw0d8KLDkKxv5KoHc2/Mahjong-Tayo-Library?node-id=395-1711&t=ddBaKcJcPxHAglSV-11',
+    githubUrl: 'https://github.com/junesseula/juness-portfolio',
     summary:
       "The story of how this exact site got made — from Google Stitch's early AI-generated iterations, through a Figma refinement pass, into MagicPath, and finally vibe-coded into production with Claude Code.",
     stats: [
@@ -391,6 +393,72 @@ export const caseStudies: CaseStudy[] = [
     ],
     results: {
       body: "The result was a fully annotated two-step verification system — enrollment, contact management, and step-up challenge — designed around real client research and handed off with redlined specs ready for BMO's engineering team to build against.",
+    },
+  },
+  {
+    slug: 'bmo-nesbitt-burns-homepage-refresh',
+    name: 'BMO Nesbitt Burns Homepage Refresh',
+    tagline: 'Modernizing a Legacy Private Banking Portal, CSS Only',
+    category: 'Branding, UI/UX',
+    platform: 'Web',
+    role: 'UX/UI Designer',
+    timeline: '2015',
+    accent: '#002D72',
+    accentSoft: '#E2E7F1',
+    accentName: 'Nesbitt Navy',
+    secondaryAccent: '#B08D57',
+    secondaryName: 'Private Bank Gold',
+    coverImage: '/bmo-nesbitt-burns-homepage-cover.jpg',
+    implementationImage: '/bmo-nesbitt-burns-homepage-tablet.png',
+    summary:
+      'A CSS-only refresh of the BMO Nesbitt Burns private banking client portal, bringing an outdated, third-party-hosted account dashboard in line with modern BMO branding — with no changes permitted to the underlying HTML.',
+    stats: [
+      { value: '2015', label: 'Project year' },
+      { value: 'CSS Only', label: 'HTML structure left untouched' },
+      { value: 'Asia → Canada', label: 'Design concepts adapted across regions' },
+      { value: 'Desktop, Tablet, Mobile', label: 'Responsive breakpoints delivered' },
+    ],
+    problem:
+      "BMO was in the midst of redefining its brand identity and redesigning its websites to modernize its digital presence. The BMO Nesbitt Burns private banking client portal for Canada was still running on Sungard, a third-party wealth management data provider, and looked visibly outdated next to BMO's new branding. The task was to align that account portal with the new look and feel — under one hard technical constraint: only CSS could be updated, the underlying HTML structure had to stay exactly as it was.",
+    research: {
+      body: "Because of its market size and high-net-worth client base, BMO's Asia private banking division had already started realigning its client websites to the new branding. Rather than starting from zero, the Canada work leaned on the design concepts Asia's team had already researched and tested, then grabbed screenshots of the live BMO Nesbitt Burns Sungard portal to use as the real baseline to design against.",
+      quote: 'I felt account details and the portfolio snapshot needed more visual prominence, so I proposed optimizing the larger screen real estate around natural reading order: top to bottom, left to right.',
+      quoteAttribution: 'Design approach, BMO Nesbitt Burns Homepage Refresh case study',
+    },
+    typography: 'Helvetica Neue',
+    implementation: [
+      {
+        title: 'Screenshotting the Baseline',
+        body: 'The live, Sungard-hosted BMO Nesbitt Burns portal was screenshotted as the real starting point, rather than redesigning from an idealized version of the old site.',
+      },
+      {
+        title: 'Adapting the Asia Pattern',
+        body: "Asia's private banking dashboard, already realigned to the new BMO branding, was used as a design reference — adapted rather than copied wholesale to fit the Canada portal's own account and portfolio data.",
+      },
+      {
+        title: 'Hand-Coded CSS Delivery',
+        body: 'With no ability to touch the underlying HTML, every visual update — layout, type, color, spacing — was implemented and shipped as CSS, personally coded to hit the final design across desktop, tablet, and mobile.',
+      },
+    ],
+    moreResources: [
+      {
+        label: 'Before: BMO Nesbitt Burns on Sungard',
+        description: 'The live, third-party-hosted portal used as the real baseline for the redesign.',
+        url: '/bmo-nesbitt-burns-homepage-before.jpg',
+      },
+      {
+        label: 'Reference: BMO Private Bank Asia Dashboard',
+        description: "Asia's already-realigned private banking dashboard, used as a design reference for the Canada refresh.",
+        url: '/bmo-nesbitt-burns-asia-reference.png',
+      },
+      {
+        label: 'Mobile Mockup',
+        description: 'The responsive mobile version of the Asset Allocation view.',
+        url: '/bmo-nesbitt-burns-homepage-mobile.png',
+      },
+    ],
+    results: {
+      body: "The refreshed portal brought BMO Nesbitt Burns' private banking clients a homepage aligned with BMO's modern branding, with account details and the portfolio snapshot given more visual prominence than the legacy Sungard layout — delivered entirely through hand-coded CSS across desktop, tablet, and mobile breakpoints, with the underlying HTML never touched.",
     },
   },
   {
