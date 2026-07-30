@@ -825,7 +825,7 @@ h3 {
   position: absolute;
   right: 0;
   bottom: 0;
-  max-width: 40%;
+  max-width: 33%;
   height: auto;
   pointer-events: none;
 }
@@ -834,9 +834,8 @@ h3 {
 }
 /* Reserves the 40% (+ gap) the portrait occupies on the right, so the text
    column can never grow wide enough to overlap it. */
-.mp-hero__inner { max-width: min(1200px, 52%); width: 100%; }
+.mp-hero__inner { max-width: min(1200px, 66%); width: 100%; }
 .mp-hero__content {
-  max-width: 790px;
   display: flex;
   flex-direction: column;
   gap: 24px;
