@@ -12,7 +12,7 @@ const valueIcons = [
   'https://storage.googleapis.com/storage.magicpath.ai/user/432624603182026752/figma-assets/8cb765cf-0859-4787-a50b-23d769f1233c.svg',
   'https://storage.googleapis.com/storage.magicpath.ai/user/432624603182026752/figma-assets/bcaa7c10-e3e6-41f7-a878-9b82343444c5.svg',
 ]
-const valueColors = ['var(--mp-blue)', 'var(--mp-maroon)', 'var(--mp-orange)']
+const valueColors = ['var(--chakra-colors-blue)', 'var(--chakra-colors-maroon)', 'var(--chakra-colors-orange)']
 
 export default function Home() {
   const featured = [
@@ -25,7 +25,7 @@ export default function Home() {
       <section className="mp-hero">
         <div className="mp-hero__inner">
           <div className="mp-hero__content">
-            <Box as="p" className="mp-eyebrow mp-hero__eyebrow" aria-label={eyebrowText}>
+            <Box as="p" className="eyebrow mp-hero__eyebrow" aria-label={eyebrowText}>
               {eyebrowText.split('').map((char, i) => (
                 <Box
                   as="span"
@@ -92,7 +92,7 @@ export default function Home() {
       <section className="mp-values">
         <div className="mp-values__inner">
           <div className="mp-values__head">
-            <p className="mp-eyebrow mp-values__eyebrow">The value proposition</p>
+            <p className="eyebrow mp-values__eyebrow">The value proposition</p>
             <h2>Why I might be a good fit for your next project</h2>
             <p className="mp-values__intro">{valuePropsIntro}</p>
           </div>
@@ -119,7 +119,7 @@ export default function Home() {
             />
           </div>
           <div className="mp-deepdive__content">
-            <p className="mp-eyebrow mp-deepdive__eyebrow">Workflow Deep Dive</p>
+            <p className="eyebrow mp-deepdive__eyebrow">Workflow Deep Dive</p>
             <h2>Featured Case Study: This Portfolio</h2>
             <p>
               What you're looking at is the case study: &ldquo;vibe coding&rdquo; taken seriously — my design-to-code process, accelerated by AI, pushed all the way to a live, production-ready site.
@@ -143,7 +143,7 @@ export default function Home() {
         <div className="mp-work__inner">
           <div className="mp-work__head">
             <div className="mp-work__headcopy">
-              <p className="mp-eyebrow mp-work__eyebrow">Archive</p>
+              <p className="eyebrow mp-work__eyebrow">Archive</p>
               <h2>Selected Work</h2>
             </div>
             <Link to="/case-studies" className="mp-work__viewall">
@@ -185,7 +185,7 @@ export default function Home() {
 
       <section className="mp-motto">
         <div className="mp-motto__inner">
-          <p className="mp-eyebrow mp-motto__eyebrow">Motto</p>
+          <p className="eyebrow mp-motto__eyebrow">Motto</p>
           <blockquote>&ldquo;{testimonial.quote}&rdquo;</blockquote>
           <cite>{testimonial.attribution}</cite>
         </div>
