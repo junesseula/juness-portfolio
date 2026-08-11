@@ -9,8 +9,8 @@ export function Research() {
     <Text>
       Beyond the visual staleness, there was a second, more personal problem: the site didn't say anything about how I actually work now. I wanted the portfolio itself to be evidence, not just a container for evidence. Specifically, I wanted to test — and show — whether an AI-enhanced workflow could hold up across the full span of a real project: from early design refinement through to production-ready code, not just as a prototyping shortcut in the middle. If the workflow was going to be a genuine claim in my case studies, the site making that claim needed to be built the same way.
     </Text>
-    <LinkBox as="article" className="group" p="5" borderWidth="1px" rounded="md" my="4" _hover={{ borderColor: '#3355FF' }}>
-      <LinkOverlay href="https://archived.junessrulloda.com"><Heading as="h4" my="2" _groupHover={{ color: '#3355FF', textDecoration: 'underline' }}>
+    <LinkBox as="article" my="4">
+      <LinkOverlay href="https://archived.junessrulloda.com"><Heading as="h4" my="2">
         Archived Portfolio
       </Heading>
       </LinkOverlay>
@@ -24,8 +24,8 @@ export function Research() {
     </Text>
     
     <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} gap="4" my="4">
-      <LinkBox as="article" className="group" p="5" borderWidth="1px" rounded="md" _hover={{ borderColor: '#3355FF' }}>
-        <LinkOverlay href="https://www.gloriaha.com/"><Heading as="h4" my="2" _groupHover={{ color: '#3355FF', textDecoration: 'underline' }}>
+      <LinkBox as="article">
+        <LinkOverlay href="https://www.gloriaha.com/"><Heading as="h5" textStyle="lg" my="2">
           Gloria Ha
         </Heading>
         </LinkOverlay>
@@ -33,8 +33,8 @@ export function Research() {
           A product designer/PM portfolio built around a tight featured-work grid, where each project card pairs a single strong image with a short role/skill tag line and a direct "Read Case Study" link. I liked how little friction there was between landing on the homepage and getting into an actual project.
         </Text>
       </LinkBox>
-      <LinkBox as="article" className="group" p="5" borderWidth="1px" rounded="md" _hover={{ borderColor: '#3355FF' }}>
-        <LinkOverlay href="https://naomicreates.co.za/"><Heading as="h4" my="2" _groupHover={{ color: '#3355FF', textDecoration: 'underline' }}>
+      <LinkBox as="article">
+        <LinkOverlay href="https://naomicreates.co.za/"><Heading as="h5" textStyle="lg" my="2">
           Naomi Creates
         </Heading>
         </LinkOverlay>
@@ -42,8 +42,8 @@ export function Research() {
           Leads with outcome-first project summaries rather than process detail up front, framing each piece of work around the problem it solved for real users. It's a good model for writing project blurbs that sell the "why" before the "how."
         </Text>
       </LinkBox>
-      <LinkBox as="article" className="group" p="5" borderWidth="1px" rounded="md" _hover={{ borderColor: '#3355FF' }}>
-        <LinkOverlay href="https://www.jastindesign.com/"><Heading as="h4" my="2" _groupHover={{ color: '#3355FF', textDecoration: 'underline' }}>
+      <LinkBox as="article">
+        <LinkOverlay href="https://www.jastindesign.com/"><Heading as="h5" textStyle="lg" my="2">
           Jastin Design
         </Heading>
         </LinkOverlay>
@@ -51,8 +51,8 @@ export function Research() {
           has a much more personal, voice-driven tone (the "Aloha, I'm Jastin" greeting, a personal motto pulled from a designer he admires) alongside a clean, minimal project list. It showed me that personality and restraint aren't in tension — the copy can carry warmth while the layout stays quiet.
         </Text>
       </LinkBox>
-      <LinkBox as="article" className="group" p="5" borderWidth="1px" rounded="md" _hover={{ borderColor: '#3355FF' }}>
-        <LinkOverlay href="https://www.nicolearoberts.com/"><Heading as="h4" my="2" _groupHover={{ color: '#3355FF', textDecoration: 'underline' }}>
+      <LinkBox as="article">
+        <LinkOverlay href="https://www.nicolearoberts.com/"><Heading as="h5" textStyle="lg" my="2">
           Nicole Roberts
         </Heading>
         </LinkOverlay>

@@ -39,6 +39,7 @@ export interface CaseStudy {
   liveUrl?: string
   figmaUrl?: string
   githubUrl?: string
+  pressUrl?: string
   summary: string
   stats: CaseStudyStat[]
   problem: string
@@ -180,6 +181,7 @@ export const caseStudies: CaseStudy[] = [
     secondaryAccent: '#E20083',
     secondaryName: 'Thentia Fuchsia',
     coverImage: '/inspections-application-cover.png',
+    pressUrl: 'https://thentia.com/insight/thentia-announces-mobile-inspectionapp/',
     summary:
       'An offline-first mobile app that lets Thentia Cloud inspectors complete full inspections — checklists, violations, signatures — with no connectivity required.',
     stats: [
@@ -193,7 +195,6 @@ export const caseStudies: CaseStudy[] = [
     research: {
       body: "The design approach started from two guiding questions: what does the user want or need to do, and what needs to be collected or performed by the user to accomplish that goal. That led to a set of core user stories — an inspector needing to perform inspections in remote areas without reliable wifi or mobile connection, to see and download inspections scheduled for today and this week for offline use, and to perform the inspection itself: collecting meeting details, working through checklist items in chronological or random order, attaching fines or violations, and collecting signatures. An interactive journey map was built to map this flow end to end.",
       quote: 'When starting any project, design and solutions should be outcome based.',
-      quoteAttribution: 'Design approach, Inspections Application case study',
     },
     typography: 'Inter',
     implementation: [
@@ -325,7 +326,6 @@ export const caseStudies: CaseStudy[] = [
     research: {
       body: "The work centered on embedding UX thinking into a technical framework meant for reuse across many teams — understanding how Enterprise Architecture structured the underlying systems, and where a consistent, user-centered layer needed to sit on top so every team building on the framework could produce a coherent assistant experience. Ideas and design directions were presented and iterated on with stakeholders using Sketch and InVision.",
       quote: 'A virtual assistant is only as good as the trust and consistency behind every interaction it has across the organization.',
-      quoteAttribution: 'Design approach, RBC Virtual Assistant case study',
     },
     typography: 'Inter',
     implementation: [
@@ -423,7 +423,6 @@ export const caseStudies: CaseStudy[] = [
     research: {
       body: "Because of its market size and high-net-worth client base, BMO's Asia private banking division had already started realigning its client websites to the new branding. Rather than starting from zero, the Canada work leaned on the design concepts Asia's team had already researched and tested, then grabbed screenshots of the live BMO Nesbitt Burns Sungard portal to use as the real baseline to design against.",
       quote: 'I felt account details and the portfolio snapshot needed more visual prominence, so I proposed optimizing the larger screen real estate around natural reading order: top to bottom, left to right.',
-      quoteAttribution: 'Design approach, BMO Nesbitt Burns Homepage Refresh case study',
     },
     typography: 'Helvetica Neue',
     implementation: [

@@ -61,12 +61,12 @@ export const skills = [
     body: 'Research-driven flows — from discovery interviews to usability testing and iteration.',
   },
   {
-    title: 'Vibe Coding',
-    body: 'AI-assisted, rapid front-end implementation that keeps design fidelity intact in production.',
-  },
-  {
     title: 'Prototyping',
     body: 'High-fidelity, interactive prototypes that de-risk decisions before a single line of code ships.',
+  },
+  {
+    title: 'Vibe Coding',
+    body: 'AI-assisted, rapid front-end implementation that keeps design fidelity intact in production.',
   },
 ]
 

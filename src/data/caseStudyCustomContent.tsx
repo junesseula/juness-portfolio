@@ -1,4 +1,5 @@
 import * as thisPortfolio from './thisPortfolio'
+import * as inspectionsApplication from './inspectionsApplication'
 
 export interface CaseStudyCustomContent {
   research?: () => JSX.Element
@@ -14,5 +15,8 @@ export const caseStudyCustomContent: Record<string, CaseStudyCustomContent> = {
     design: thisPortfolio.Design,
     implementation: thisPortfolio.Implementation,
     results: thisPortfolio.Results,
+  },
+  'inspections-application': {
+    results: inspectionsApplication.Results,
   },
 }
