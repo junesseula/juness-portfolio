@@ -1,4 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
+import { Text } from '@chakra-ui/react'
 import { caseStudies, getCaseStudy } from '../data/caseStudies'
 import { caseStudyCustomContent } from '../data/caseStudyCustomContent'
 import MoreResources from '../components/MoreResources'
@@ -19,9 +20,9 @@ export default function CaseStudyDetail() {
   return (
     <>
       <header className="csd-header container">
-        <p className="eyebrow">Case Study</p>
+        <Text className="eyebrow">Case Study</Text>
         <h1>{study.name}</h1>
-        <p className="lede" style={{ marginTop: 16 }}>{study.tagline}</p>
+        <Text className="lede" style={{ marginTop: 16 }}>{study.tagline}</Text>
 
         <div className="csd-meta">
           <div>
@@ -106,15 +107,15 @@ export default function CaseStudyDetail() {
 
       <section className="csd-block">
         <div className="container">
-          <p className="kicker">01. RESEARCH</p>
+          <Text className="kicker">01. RESEARCH</Text>
           <h2>The problem</h2>
           <div className="body-grid">
-            <p className="lead">{study.problem}</p>
+            <Text className="lead">{study.problem}</Text>
             <div>
-              <p className="lead" style={{ fontSize: 15, marginBottom: 20 }}>{study.research.body}</p>
+              <Text className="lead" style={{ fontSize: 15, marginBottom: 20 }}>{study.research.body}</Text>
               <blockquote className="pull-quote">
-                &ldquo;{study.research.quote}&rdquo;
-                <cite>{study.research.quoteAttribution}</cite>
+                <Text as="span">&ldquo;{study.research.quote}&rdquo;</Text>
+                <Text as="cite">{study.research.quoteAttribution}</Text>
               </blockquote>
             </div>
           </div>
@@ -124,14 +125,14 @@ export default function CaseStudyDetail() {
 
       <section className="csd-block">
         <div className="container">
-          <p className="kicker">02. DESIGN</p>
+          <Text className="kicker">02. DESIGN</Text>
           <h2>Visual language</h2>
           <div className="body-grid">
             <div>
-              <p className="lead" style={{ fontSize: 15 }}>
+              <Text className="lead" style={{ fontSize: 15 }}>
                 Every product has a voice — and a visual language that reinforces it.
                 Here, that's {study.accentName} and {study.secondaryName}, paired with {study.typography}.
-              </p>
+              </Text>
               <div className="swatch-row">
                 <div className="swatch" style={{ background: study.accent }}>
                   <span className="name">{study.accentName}</span>
@@ -154,7 +155,7 @@ export default function CaseStudyDetail() {
 
       <section className="csd-block">
         <div className="container">
-          <p className="kicker">03. IMPLEMENTATION</p>
+          <Text className="kicker">03. IMPLEMENTATION</Text>
           <h2>How it got built</h2>
           {study.implementationImage && (
             <img
@@ -168,7 +169,7 @@ export default function CaseStudyDetail() {
               <div className="step" key={step.title}>
                 <div className="index">STEP 0{i + 1}</div>
                 <h3>{step.title}</h3>
-                <p>{step.body}</p>
+                <Text>{step.body}</Text>
               </div>
             ))}
           </div>
@@ -179,9 +180,9 @@ export default function CaseStudyDetail() {
 
       <section className="csd-block" style={study.testimonials?.length ? undefined : { borderBottom: 'none' }}>
         <div className="container">
-          <p className="kicker">04. RESULTS</p>
+          <Text className="kicker">04. RESULTS</Text>
           <h2>What changed</h2>
-          <p className="lead" style={{ marginBottom: 28 }}>{study.results.body}</p>
+          <Text className="lead" style={{ marginBottom: 28 }}>{study.results.body}</Text>
           <div className="results-grid">
             {study.stats.map((s) => (
               <div className="cell" key={s.label}>
@@ -192,8 +193,8 @@ export default function CaseStudyDetail() {
           </div>
           {study.results.quote && (
             <blockquote className="pull-quote" style={{ marginTop: 32 }}>
-              &ldquo;{study.results.quote}&rdquo;
-              <cite>{study.results.quoteAttribution}</cite>
+              <Text as="span">&ldquo;{study.results.quote}&rdquo;</Text>
+              <Text as="cite">{study.results.quoteAttribution}</Text>
             </blockquote>
           )}
           {custom?.results && <custom.results />}
@@ -207,11 +208,11 @@ export default function CaseStudyDetail() {
             <div className="testimonial-grid">
               {study.testimonials.map((t) => (
                 <blockquote className="pull-quote" key={t.name}>
-                  &ldquo;{t.quote}&rdquo;
-                  <cite>
+                  <Text as="span">&ldquo;{t.quote}&rdquo;</Text>
+                  <Text as="cite">
                     {t.name}
                     {t.title && <span className="testimonial-title">{t.title}</span>}
-                  </cite>
+                  </Text>
                 </blockquote>
               ))}
             </div>
@@ -221,9 +222,9 @@ export default function CaseStudyDetail() {
 
       <section className="csd-cta container">
         <h2>Ready to build something exceptional?</h2>
-        <p className="lede" style={{ margin: '0 auto' }}>
+        <Text className="lede" style={{ margin: '0 auto' }}>
           Let's talk about what you're working on and whether it's a fit.
-        </p>
+        </Text>
         <div className="btn-row">
           <a href="/about#contact" className="btn btn--primary">Get in touch</a>
           <Link to="/case-studies" className="btn btn--secondary">Browse more work</Link>

@@ -1,3 +1,4 @@
+import { Text } from '@chakra-ui/react'
 import type { ResourceLink } from '../data/caseStudies'
 
 interface MoreResourcesProps {
@@ -20,7 +21,7 @@ export default function MoreResources({ items }: MoreResourcesProps) {
             className="more-resources__card"
           >
             <span className="more-resources__label">{item.label}</span>
-            {item.description && <p>{item.description}</p>}
+            {item.description && <Text>{item.description}</Text>}
             <span className="more-resources__link">View resource &rarr;</span>
           </a>
         ))}
