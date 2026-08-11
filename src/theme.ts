@@ -18,9 +18,11 @@ const config = defineConfig({
       borderColor: 'var(--color-blue)',
       transform: 'translateY(-2px)',
     },
+    '.chakra-linkbox__overlay': {
+      color: 'var(--color-blue) !important',
+    },
     '.chakra-linkbox:hover .chakra-linkbox__overlay': {
-      color: 'var(--color-blue)',
-      textDecoration: 'underline',
+      textDecoration: 'underline !important',
     },
   },
 })
