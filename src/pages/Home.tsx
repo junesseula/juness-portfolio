@@ -119,11 +119,10 @@ export default function Home() {
             />
           </div>
           <div className="mp-deepdive__content">
-            <p className="mp-eyebrow mp-deepdive__eyebrow">Process deep-dive</p>
-            <h2>Featured: Designing This Portfolio</h2>
+            <p className="mp-eyebrow mp-deepdive__eyebrow">Workflow Deep Dive</p>
+            <h2>Featured Case Study: This Portfolio</h2>
             <p>
-              A meta-exploration of &ldquo;vibe coding.&rdquo; This project details my journey
-              from initial design to a live, high-performance site.
+              What you're looking at is the case study: &ldquo;vibe coding&rdquo; taken seriously — my design-to-code process, accelerated by AI, pushed all the way to a live, production-ready site.
             </p>
             <div className="mp-deepdive__tags">
               {['Research', 'Vibe Coding', 'Development'].map((tag) => (

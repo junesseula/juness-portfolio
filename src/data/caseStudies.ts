@@ -61,8 +61,8 @@ export interface CaseStudy {
 export const caseStudies: CaseStudy[] = [
   {
     slug: 'vibe-coding-this-portfolio',
-    name: 'This Portfolio',
-    tagline: 'Case Study: This Portfolio',
+    name: 'This Portfolio Website',
+    tagline: 'A live test of vibe coding, from research to production code.',
     category: 'AI-Assisted Design & Development',
     platform: 'Web',
     role: 'Designer & Vibe Coder',
@@ -84,13 +84,17 @@ export const caseStudies: CaseStudy[] = [
       { value: 'This Site', label: 'The actual result you\'re looking at' },
     ],
     problem:
-      "Most \"vibe coded\" sites either skip design entirely or skip real content entirely — AI-generated layouts with lorem-ipsum case studies. I wanted to prove the workflow could go all the way: real design refinement, real production code, and real client work, with no step faked.",
+      "My previous portfolio was built on WordPress, using a pre-built theme. That decision made sense early on — it got a site live fast — but it came with a ceiling. Themes dictate structure: I was choosing between a fixed set of layout blocks, not designing my own. Every customization meant fighting the theme's CSS or accepting a compromise. Over time the design started to look and feel dated, and I had no real path to fix that without a rebuild.",
     research: {
-      body: "The process started with Google Stitch, Google's AI UI-generation tool, used to rapidly generate early visual directions for the portfolio — exploring layout and structure fast instead of starting from a blank canvas. The strongest direction was then exported into Figma and refined by hand: typography, spacing, hierarchy, and content, with full manual design control.",
+      body: "This gave the rebuild two success criteria, not one: a design with full control over layout and visual identity, and a build process fast and rigorous enough to serve as its own proof point.",
       quote: 'Speed gets you a direction. Refinement gets you a product.',
     },
     typography: 'Plus Jakarta Sans',
     implementation: [
+      {
+        title: 'Google Stitch + Figma',
+        body: 'Google Stitch helped come up with early design layouts were explored inspired from the portfolios I admired. Those were then exported into Figma for further refinement and polishing up tight details.',
+      },
       {
         title: 'Vibe Coding',
         body: 'The MagicPath skill was installed into Claude Code, letting it reference the MagicPath canvas frames directly and use them to scaffold and build this production React + Vite codebase.',
@@ -98,10 +102,6 @@ export const caseStudies: CaseStudy[] = [
       {
         title: 'Code Refinement',
         body: "The initial build was missing imagery, animations felt flat, and the design system wasn't holding together across components. The codebase was reformatted to TypeScript and Chakra UI was installed, bringing tighter design consistency, styling, and motion to the finished site.",
-      },
-      {
-        title: 'Editorial Refinement',
-        body: 'Each real case study — Cirrus, Inspections Application, Surefund — was individually researched from its real source and rewritten into the site\'s voice, with no invented metrics or quotes.',
       },
     ],
     results: {

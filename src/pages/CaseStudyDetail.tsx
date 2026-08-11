@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { caseStudies, getCaseStudy } from '../data/caseStudies'
+import { caseStudyCustomContent } from '../data/caseStudyCustomContent'
 import MoreResources from '../components/MoreResources'
 
 export default function CaseStudyDetail() {
@@ -10,6 +11,7 @@ export default function CaseStudyDetail() {
     return <Navigate to="/case-studies" replace />
   }
 
+  const custom = caseStudyCustomContent[study.slug]
   const idx = caseStudies.findIndex((c) => c.slug === slug)
   const prev = caseStudies[(idx - 1 + caseStudies.length) % caseStudies.length]
   const next = caseStudies[(idx + 1) % caseStudies.length]
@@ -116,18 +118,19 @@ export default function CaseStudyDetail() {
               </blockquote>
             </div>
           </div>
+          {custom?.research && <custom.research />}
         </div>
       </section>
 
       <section className="csd-block">
         <div className="container">
-          <p className="kicker">02. DESIGN SYSTEM</p>
+          <p className="kicker">02. DESIGN</p>
           <h2>Visual language</h2>
           <div className="body-grid">
             <div>
               <p className="lead" style={{ fontSize: 15 }}>
-                Every project gets its own accent within the broader design system —
-                here it's built around {study.accentName} and {study.secondaryName}, paired with {study.typography}.
+                Every product has a voice — and a visual language that reinforces it.
+                Here, that's {study.accentName} and {study.secondaryName}, paired with {study.typography}.
               </p>
               <div className="swatch-row">
                 <div className="swatch" style={{ background: study.accent }}>
@@ -145,6 +148,7 @@ export default function CaseStudyDetail() {
               <div className="small">{study.typography} &mdash; headings &amp; body</div>
             </div>
           </div>
+          {custom?.design && <custom.design />}
         </div>
       </section>
 
@@ -169,6 +173,7 @@ export default function CaseStudyDetail() {
             ))}
           </div>
           <MoreResources items={study.moreResources} />
+          {custom?.implementation && <custom.implementation />}
         </div>
       </section>
 
@@ -191,6 +196,7 @@ export default function CaseStudyDetail() {
               <cite>{study.results.quoteAttribution}</cite>
             </blockquote>
           )}
+          {custom?.results && <custom.results />}
         </div>
       </section>
 
