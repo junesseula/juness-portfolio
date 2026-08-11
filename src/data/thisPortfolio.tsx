@@ -14,7 +14,7 @@ export function Research() {
         Archived Portfolio
       </Heading>
       </LinkOverlay>
-      <Text textStyle="sm"  mb="3" color="fg.muted">
+      <Text textStyle="sm"  mb="3">
         The previous version of this portfolio website, kept live for reference.
       </Text>
     </LinkBox>
@@ -29,7 +29,7 @@ export function Research() {
           Gloria Ha
         </Heading>
         </LinkOverlay>
-        <Text textStyle="sm" mb="3" color="fg.muted">
+        <Text textStyle="sm" mb="3">
           A product designer/PM portfolio built around a tight featured-work grid, where each project card pairs a single strong image with a short role/skill tag line and a direct "Read Case Study" link. I liked how little friction there was between landing on the homepage and getting into an actual project.
         </Text>
       </LinkBox>
@@ -38,7 +38,7 @@ export function Research() {
           Naomi Creates
         </Heading>
         </LinkOverlay>
-        <Text textStyle="sm"  mb="3" color="fg.muted">
+        <Text textStyle="sm"  mb="3">
           Leads with outcome-first project summaries rather than process detail up front, framing each piece of work around the problem it solved for real users. It's a good model for writing project blurbs that sell the "why" before the "how."
         </Text>
       </LinkBox>
@@ -47,7 +47,7 @@ export function Research() {
           Jastin Design
         </Heading>
         </LinkOverlay>
-        <Text textStyle="sm"  mb="3" color="fg.muted">
+        <Text textStyle="sm"  mb="3">
           has a much more personal, voice-driven tone (the "Aloha, I'm Jastin" greeting, a personal motto pulled from a designer he admires) alongside a clean, minimal project list. It showed me that personality and restraint aren't in tension — the copy can carry warmth while the layout stays quiet.
         </Text>
       </LinkBox>
@@ -56,7 +56,7 @@ export function Research() {
           Nicole Roberts
         </Heading>
         </LinkOverlay>
-        <Text textStyle="sm"  mb="3" color="fg.muted">
+        <Text textStyle="sm"  mb="3">
           the most metrics-driven of the four: every case study surfaces hard numbers (conversion lift, completion rate) as visual callouts, backed by a dedicated testimonials section and a "key strengths" grid. It's a strong reference for making impact legible at a glance, for someone skimming rather than reading every case study in full.
         </Text>
       </LinkBox>
