@@ -504,6 +504,7 @@ const config = defineConfig({
       "aspectRatio": "16 / 10",
       "position": "relative",
       "display": "flex",
+      "flexDirection": "column",
       "alignItems": "flex-start",
       "justifyContent": "space-between",
       "padding": "24px",
@@ -517,7 +518,6 @@ const config = defineConfig({
       "fontSize": "30px",
       "fontWeight": "800",
       "color": "var(--chakra-colors-white)",
-      "alignSelf": "flex-end",
     },
     ".cs-card__body": {
       "padding": "24px",
