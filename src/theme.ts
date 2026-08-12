@@ -88,9 +88,11 @@ const config = defineConfig({
       "flex": "1",
     },
     ".section": {
-      "padding": "96px 0",
+      "paddingTop": "96px",
+      "paddingBottom": "96px",
       "@media (max-width: 720px)": {
-        "padding": "64px 0",
+        "paddingTop": "64px",
+        "paddingBottom": "64px",
       },
     },
     ".eyebrow": {
@@ -474,7 +476,8 @@ const config = defineConfig({
       "color": "var(--chakra-colors-ink-soft)",
     },
     ".cs-hero": {
-      "padding": "64px 0 32px",
+      "paddingTop": "64px",
+      "paddingBottom": "32px",
     },
     ".cs-grid": {
       "display": "grid",
@@ -540,7 +543,8 @@ const config = defineConfig({
       "fontWeight": "600",
     },
     ".csd-header": {
-      "padding": "56px 0 40px",
+      "paddingTop": "56px",
+      "paddingBottom": "40px",
       "borderBottom": "1px solid var(--chakra-colors-line)",
     },
     ".csd-header .eyebrow": {
@@ -814,7 +818,8 @@ const config = defineConfig({
       "color": "var(--chakra-colors-blue)",
     },
     ".about-hero": {
-      "padding": "72px 0 24px",
+      "paddingTop": "72px",
+      "paddingBottom": "24px",
     },
     ".about-hero .lede": {
       "maxWidth": "720px",
