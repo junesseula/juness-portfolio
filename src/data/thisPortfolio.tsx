@@ -79,7 +79,18 @@ export function Research() {
 }
 
 export function Design() {
-  return <Box mt={6}></Box>
+  return <Box mt={6}>
+    <Box
+      as="iframe"
+      src="https://embed.figma.com/design/dVo9Pw0d8KLDkKxv5KoHc2/My-Projects?node-id=395-1711&embed-host=share"
+      allowFullScreen
+      w="100%"
+      maxW="800px"
+      h={{ base: '300px', md: '450px' }}
+      border="1px solid rgba(0, 0, 0, 0.1)"
+      borderRadius="md"
+    />
+  </Box>
 }
 
 export function Implementation() {
