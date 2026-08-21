@@ -1,4 +1,5 @@
-import { Box, Heading, Link, LinkBox, LinkOverlay, List, SimpleGrid, Span, Text } from '@chakra-ui/react'
+import { Box, chakra, Heading, LinkBox, LinkOverlay, List, SimpleGrid, Text } from '@chakra-ui/react'
+const FigmaEmbed = chakra('iframe')
 
 // Custom section content for the "This Portfolio" case study (slug: vibe-coding-this-portfolio).
 // Each function returns extra JSX appended to the end of its section on CaseStudyDetail.
@@ -80,8 +81,7 @@ export function Research() {
 
 export function Design() {
   return <Box mt={6}>
-    <Box
-      as="iframe"
+    <FigmaEmbed
       src="https://embed.figma.com/design/dVo9Pw0d8KLDkKxv5KoHc2/My-Projects?node-id=395-1711&embed-host=share"
       allowFullScreen
       w="100%"
